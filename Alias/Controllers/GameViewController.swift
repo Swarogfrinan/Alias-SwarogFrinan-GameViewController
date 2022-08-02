@@ -46,11 +46,11 @@ class GameViewController: UIViewController {
     ///Лейбл слова которого нужно угадать
     private lazy var guessWordLabel: UILabel = .createLabel(text: "Картошка", font: 48, color: .black)
     ///Серая кнопка сброса игры
-    private let showAlertButton: UIButton = .createButton(title: "Сбросить", height: 60, color: .systemGray, image: nil)
+    private let showAlertButton: UIButton = .createButton(title: "Сбросить", height: 60, color: .systemGray, image: nil, checkmark: nil)
     ///Зеленая кнопка правильного ответа.
-    private let correctButton: UIButton = .createButton(title: "Правильно", height: 60, color: .systemGreen, image: nil)
+    private let correctButton: UIButton = .createButton(title: "Правильно", height: 60, color: .systemGreen, image: nil, checkmark: nil)
     ///Красная кнопка пропуска вопроса
-    private let skipButton: UIButton = . createButton(title: "Пропустить", height: 60, color: .systemRed, image: nil)
+    private let skipButton: UIButton = . createButton(title: "Пропустить", height: 60, color: .systemRed, image: nil, checkmark: nil)
     
     //MARK: - LifeCycle ViewController
     override func viewDidLoad() {

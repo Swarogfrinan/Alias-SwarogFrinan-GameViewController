@@ -21,9 +21,9 @@ class MainViewController: UIViewController {
         return label
     }()
     
-    private lazy var startButton: UIButton = .createButton(title: "СТАРТ", height: 96, color: #colorLiteral(red: 0, green: 0.7130450606, blue: 0.222219348, alpha: 1), image: .none)
+    private lazy var startButton: UIButton = .createButton(title: "СТАРТ", height: 96, color: #colorLiteral(red: 0, green: 0.7130450606, blue: 0.222219348, alpha: 1), image: .none, checkmark: .none)
     
-    private lazy var rulesButton: UIButton = .createButton(title: "Правила", height: 96, color: UIColor.white, image: .none)
+    private lazy var rulesButton: UIButton = .createButton(title: "Правила", height: 96, color: UIColor.white, image: .none, checkmark: .none)
     
     private func setupButtons() {
         startButton.addTarget(self, action: #selector (startButtonPressed), for: .touchUpInside)

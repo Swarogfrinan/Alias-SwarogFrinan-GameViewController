@@ -12,7 +12,15 @@ class TopicViewController: UIViewController{
     
     let vStack = StackView()
     
-    var selectionButton = UIButton.createButton(title: "Играть!", height: 63, color: .systemGreen, image: nil)
+    var selectionButton = UIButton.createButton(title: "Играть!", height: 63, color: .systemGreen, image: .none, checkmark: .none)
+    
+    private let checkmarkImage: UIImageView = {
+        let imageView = UIImageView()
+        imageView.image = UIImage(named: "checkmark")
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.alpha = 1
+        return imageView
+    }()
     
     private lazy var scrollView: UIScrollView = {
         let scrollView = UIScrollView()

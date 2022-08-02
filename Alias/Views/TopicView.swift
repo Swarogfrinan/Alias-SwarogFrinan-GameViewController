@@ -12,10 +12,13 @@ class StackView: UIStackView{
     
     
     var titleLabel = UILabel.createLabel(text: "Категории", font: 34, color: .black)
-    var categoryOne = UIButton.createButton(title: "Личности", height: 120, color: .systemBlue, image: UIImageView(image: UIImage(named: "cowboy")))
-    var categoryTwo = UIButton.createButton(title: "Животные", height: 120, color: .systemBlue, image: UIImageView(image: UIImage(named: "frog")))
-    var categoryThree = UIButton.createButton(title: "Еда", height: 120, color: .systemBlue, image: UIImageView(image: UIImage(named: "burger")))
-    var categoryFour = UIButton.createButton(title: "Хобби", height: 120, color: .systemBlue, image: UIImageView(image: UIImage(named: "hobby")))
+    var categoryOne = UIButton.createButton(title: "Личности", height: 120, color: .systemBlue, image: UIImageView(image: UIImage(named: "cowboy")), checkmark: UIImageView(image: UIImage(named: "checkmark")))
+    
+    var categoryTwo = UIButton.createButton(title: "Животные", height: 120, color: .systemBlue, image: UIImageView(image: UIImage(named: "frog")), checkmark: UIImageView(image: UIImage(named: "checkmark")))
+    
+    var categoryThree = UIButton.createButton(title: "Еда", height: 120, color: .systemBlue, image: UIImageView(image: UIImage(named: "burger")), checkmark: UIImageView(image: UIImage(named: "checkmark")))
+    
+    var categoryFour = UIButton.createButton(title: "Хобби", height: 120, color: .systemBlue, image: UIImageView(image: UIImage(named: "hobby")), checkmark: UIImageView(image: UIImage(named: "checkmark")))
     
     init(){
         super.init(frame: .zero)
