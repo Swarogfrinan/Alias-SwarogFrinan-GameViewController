@@ -12,7 +12,7 @@ import Foundation
  }
 let aliasWords =  parseJSON(resourseName: "animalsJson")
 let emodjyArray = [
-"🤠", "🗿", "⛺️", "🐔", "😜", "😱", "🚀",
+"🤠", "🗿", "🐔", "😜", "😱", "🚀",
 "🐳", "🍄", "🦠", "🐸", "👑", "😏", "🥳"
 ]
 
@@ -23,7 +23,7 @@ func parseJSON(resourseName: String) -> [String]?{ //парсинг файлов
         do {
             let data = try Data(contentsOf: url)
             let json = try JSONDecoder().decode(AliasManager.self, from: data)
-            print(" это json файлы от Владимира - \(json.words)")
+            print(" это json файлы \(json.words)")
             return json.words
            
         }

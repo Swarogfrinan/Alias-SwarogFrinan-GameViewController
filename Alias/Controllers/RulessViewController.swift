@@ -49,6 +49,7 @@ class RulesViewController: UIViewController {
         view.backgroundColor = .white
         loadSubview()
         settingConstraints()
+        navigationController?.navigationBar.backItem?.hidesBackButton = true
     }
     
     func settingConstraints(){

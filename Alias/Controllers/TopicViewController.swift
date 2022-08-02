@@ -18,7 +18,7 @@ class TopicViewController: UIViewController{
         let imageView = UIImageView()
         imageView.image = UIImage(named: "checkmark")
         imageView.translatesAutoresizingMaskIntoConstraints = false
-        imageView.alpha = 1
+        imageView.alpha = 0
         return imageView
     }()
     
@@ -27,7 +27,7 @@ class TopicViewController: UIViewController{
         scrollView.backgroundColor = .white
         scrollView.frame = view.bounds
         scrollView.contentSize = contentSize
-       return scrollView
+        return scrollView
     }()
     
     private lazy var contentView: UIView = {
@@ -70,6 +70,7 @@ class TopicViewController: UIViewController{
         scrollView.addSubview(contentView)
         contentView.addSubview(vStack)
         view.addSubview(selectionButton)
+        
     }
     
     func targeting(){
@@ -97,8 +98,6 @@ class TopicViewController: UIViewController{
         selectionButton.addTarget(self, action: #selector(selectButtonTapped), for: .touchUpInside)
     }
     
-    
-    
     @objc func categoryOne(){
         clearSelection()
         print("category One")
@@ -110,6 +109,7 @@ class TopicViewController: UIViewController{
         print("Category Two")
         vStack.categoryTwo.backgroundColor = .systemGreen
         selectionButton.isHidden = false
+        checkmarkImage.alpha = 1
     }
     @objc func categoryThree(){
         clearSelection()

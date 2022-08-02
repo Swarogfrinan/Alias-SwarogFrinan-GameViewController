@@ -37,7 +37,6 @@ class StackView: UIStackView{
         categoryThree.translatesAutoresizingMaskIntoConstraints = false
         categoryFour.translatesAutoresizingMaskIntoConstraints = false
         translatesAutoresizingMaskIntoConstraints = false
-        
         NSLayoutConstraint.activate([
             titleLabel.topAnchor.constraint(equalTo: topAnchor),
             titleLabel.centerXAnchor.constraint(equalTo: centerXAnchor),

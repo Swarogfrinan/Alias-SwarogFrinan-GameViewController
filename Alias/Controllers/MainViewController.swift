@@ -68,6 +68,7 @@ class MainViewController: UIViewController {
         setupViews()
         setupButtons()
         setConstraints()
+        navigationController?.navigationBar.backItem?.hidesBackButton = true
     }
     
     //MARK: Buttons

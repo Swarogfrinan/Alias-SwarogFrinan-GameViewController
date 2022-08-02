@@ -28,7 +28,7 @@ extension UIButton {
             
             if let checkmark = checkmark {
            button.addSubview(checkmark)
-            checkmark.alpha = 0
+            checkmark.alpha = 1
            checkmark.translatesAutoresizingMaskIntoConstraints = false
            
                 
