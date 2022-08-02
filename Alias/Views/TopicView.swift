@@ -12,10 +12,10 @@ class StackView: UIStackView{
     
     
     var titleLabel = UILabel.createLabel(text: "Категории", font: 34, color: .black)
-    var categoryOne = UIButton.createButton(title: "Категория 1", height: 120, color: .systemBlue, image: .init(systemName: "checkmark.circle"))
-    var categoryTwo = UIButton.createButton(title: "Категория 2", height: 120, color: .systemBlue, image: .init(systemName: "checkmark.circle"))
-    var categoryThree = UIButton.createButton(title: "Категория 3", height: 120, color: .systemBlue, image: .init(systemName: "checkmark.circle"))
-    var categoryFour = UIButton.createButton(title: "Категория 4", height: 120, color: .systemBlue, image: .init(systemName: "checkmark.circle"))
+    var categoryOne = UIButton.createButton(title: "Личности", height: 120, color: .systemBlue, image: UIImageView(image: UIImage(named: "cowboy")))
+    var categoryTwo = UIButton.createButton(title: "Животные", height: 120, color: .systemBlue, image: UIImageView(image: UIImage(named: "frog")))
+    var categoryThree = UIButton.createButton(title: "Еда", height: 120, color: .systemBlue, image: UIImageView(image: UIImage(named: "burger")))
+    var categoryFour = UIButton.createButton(title: "Хобби", height: 120, color: .systemBlue, image: UIImageView(image: UIImage(named: "hobby")))
     
     init(){
         super.init(frame: .zero)

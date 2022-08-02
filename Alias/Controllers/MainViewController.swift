@@ -27,12 +27,11 @@ class MainViewController: UIViewController {
     
     private func setupButtons() {
         startButton.addTarget(self, action: #selector (startButtonPressed), for: .touchUpInside)
-        startButton.addShadowOnView()
         
+        rulesButton.addTarget(self, action: #selector(rulesButtonPressed), for: .touchUpInside)
         rulesButton.setTitleColor(UIColor.black, for: .normal)
         rulesButton.layer.borderWidth = 1
         rulesButton.layer.borderColor = UIColor.black.cgColor
-        rulesButton.addShadowOnView()
     }
     
     
@@ -75,12 +74,20 @@ class MainViewController: UIViewController {
     
     @objc private func startButtonPressed() {
         
-        print("START")
+        let topicViewController = TopicViewController()
+        
+        topicViewController.modalPresentationStyle = .fullScreen
+        topicViewController.modalTransitionStyle = .flipHorizontal
+        navigationController?.pushViewController(topicViewController, animated: true)
     }
     
     @objc private func rulesButtonPressed() {
-        
-        print("Правила")
+
+        let rulesViewController = RulesViewController()
+
+        rulesViewController.modalPresentationStyle = .fullScreen
+        rulesViewController.modalTransitionStyle = .flipHorizontal
+        navigationController?.pushViewController(rulesViewController, animated: true)
     }
     
     //MARK: Setup View
@@ -98,7 +105,6 @@ class MainViewController: UIViewController {
 }
 
 //MARK: - SetConstraints
-
 extension MainViewController {
     
     private func setConstraints() {
@@ -106,7 +112,6 @@ extension MainViewController {
         NSLayoutConstraint.activate([
             aliasGameLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor,constant: 30),
             aliasGameLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor)
-        
         ])
         NSLayoutConstraint.activate([
             homeImage.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),

@@ -15,7 +15,7 @@ class GameViewController: UIViewController {
     var index : Int = 0
     var aliasTimer = Timer()
     var aliasRandomIventTimer = Timer()
-    var time : Int = 6
+    var time : Int = 60
     var greenCount : Int = 0
     var redCount : Int = 0
     //MARK: - Properties
@@ -81,7 +81,7 @@ class GameViewController: UIViewController {
 }
     ///Запуск рандомного события.
     private func startRandomTimer() {
-        aliasRandomIventTimer = Timer.scheduledTimer(timeInterval: Double.random(in: 2...8), target: self, selector: #selector (randomIventTimer), userInfo: nil, repeats: false)
+        aliasRandomIventTimer = Timer.scheduledTimer(timeInterval: Double.random(in: 25...56), target: self, selector: #selector (randomIventTimer), userInfo: nil, repeats: false)
     }
     ///Остановить основной таймер
     private func stopTimer() {
@@ -163,10 +163,9 @@ class GameViewController: UIViewController {
                 style: .destructive,
                 handler: { _ in
                 print("Кнопка сброса в GameVc-Alert нажата")
-                let mainViewController = MainViewController()
-                self.dismiss(animated: true, completion: nil)
-                self.modalPresentationStyle = .fullScreen
-                self.present(mainViewController, animated: true)
+                    self.startGameAgain()
+                    self.dismiss(animated: true, completion: nil)
+                print("Start game again pressed")
             })
         ///Добавление кнопки "Сбросить" в Alert
             alert.addAction(closeAction)
@@ -190,6 +189,12 @@ class GameViewController: UIViewController {
         guessWordLabel.text = aliasWords?.randomElement()
         playFalseSound()
 }
+    private func startGameAgain() {
+    let mainViewController = MainViewController()
+    mainViewController.modalPresentationStyle = .fullScreen
+    mainViewController.modalTransitionStyle = .flipHorizontal
+    navigationController?.pushViewController(mainViewController, animated: true)
+    }
 }
 //MARK: - SetConstraints
 extension GameViewController {
